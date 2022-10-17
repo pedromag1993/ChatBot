@@ -43,9 +43,9 @@ def chat_bot():
         with open("chat.txt", "r") as f:
             st.text_area("Historico", value=f.read(), height=200)
     # apagar o historico
-    if st.button("Apagar Historico"):
-        os.remove("chat.txt")
-        st.success("Historico apagado com sucesso")
+        if st.button("Apagar Histórico"):
+            os.remove("chat.txt")
+            st.success("Histórico apagado com sucesso")
 
 
 def chat_bot_amigos():
@@ -218,19 +218,19 @@ def main():
     """
     confingurar_button()
     st.sidebar.title("Menu")
-    menu = ["Chat Bot", "Chat Bot Amigos", "Chat Bot Marvin", "Chat Bot Alexa", "Chat Bot Javascript", "Sobre"]
+    menu = ["Chat Bot Atendente", "Chat Bot Amigável", "Marvin Irônico", "Alexa", "Chat Bot Javascript", "Sobre"]
     choice = st.sidebar.selectbox("Escolha uma opção", menu)
     # chatbot
-    if choice == "Chat Bot":
+    if choice == "Chat Bot Atendente":
         chat_bot()
     # chatbot amigos
-    elif choice == "Chat Bot Amigos":
+    elif choice == "Chat Bot Amigável":
         chat_bot_amigos()
     # chatbot marvin
-    elif choice == "Chat Bot Marvin":
+    elif choice == "Marvin Irônico":
         chat_bot_marv()
     # chatbot alexa
-    elif choice == "Chat Bot Alexa":
+    elif choice == "Alexa":
         chat_bot_alexa()
     # chat bot javascript
     elif choice == "Chat Bot Javascript":
@@ -239,8 +239,8 @@ def main():
     elif choice == "Sobre":
         st.subheader("Sobre")
         st.text("Chat Bot com OpenAI, Streamlit e Python")
-        st.text("Desenvolvido por: Tássio Sales")
-        st.text("Data: 2022-10-13")
+        st.text("Desenvolvido por: Pedro Magalhães")
+        st.text("Data: 2022-10-17")
         st.text("Versão: 1.0.0")
         # falar sobre python
         st.subheader("Sobre Python")
@@ -265,7 +265,7 @@ def main():
                 "para fornecer informações sobre produtos e serviços e para fornecer suporte ao cliente.")
         # falar sobre o desenvolvedor
         st.subheader("Sobre o Desenvolvedor")
-        st.text("Tássio Sales é um desenvolvedor de software, apaixonado por tecnologia.")
+        st.text("Pedro Magalhães é estudante do sétimo semstre em Ciência de Dados e Inteligência Artificial e Advogado.")
 
 
 if __name__ == '__main__':
