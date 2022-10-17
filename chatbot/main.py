@@ -43,9 +43,9 @@ def chat_bot():
         with open("chat.txt", "r") as f:
             st.text_area("Historico", value=f.read(), height=200)
     # apagar o historico
-        if st.button("Apagar Histórico"):
-            os.remove("chat.txt")
-            st.success("Histórico apagado com sucesso")
+    if st.button("Apagar Histórico"):
+        os.remove("chat.txt")
+        st.success("Histórico apagado com sucesso")
 
 
 def chat_bot_amigos():
